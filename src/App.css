@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 75px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #fc7, #fe9, #fd8);
+}
+
+.whitespace {
+  height: 25vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 5rem;
+  margin: 50px;
+  font-weight: 500;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
