@@ -36,7 +36,7 @@ header ul li:hover {
 }
 
 .switch-container {
-  translate: 0 2px;
+  translate: 0 3px;
 }
 
 .switch-container input[type="checkbox"] {
@@ -48,7 +48,7 @@ header ul li:hover {
 .switch-container label {
   width: 60px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #f44;
   border-radius: 16px;
   position: relative;
   cursor: pointer;
@@ -60,7 +60,7 @@ header ul li:hover {
 }
 
 .switch-container label:after {
-  content: "Esp";
+  content: "ES";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +77,7 @@ header ul li:hover {
 
 .switch-container input[type="checkbox"]:checked + label:after {
   left: 33px;
-  content: "Eng";
+  content: "EN";
 }
 
 .background {
