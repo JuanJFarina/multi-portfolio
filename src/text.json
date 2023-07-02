@@ -1,0 +1,122 @@
+{
+    "español": {
+        "header": ["Minimalista", "Plano", "Microinteracciones", "Oscuro"],
+        "title": "Desarrollador Full-Stack",
+        "sections": 
+        [
+            {
+                "title": "Acerca de Mí",
+                "text": 
+                [
+                    "Soy un desarrollador altamente colaborativo y eficiente con amplia trayectoria en desarrollo y amplia experiencia en entornos de trabajo empresarial y liderando grupos.",
+                    "Soy Fundador y CEO de una gran escuela de ballet liderando un personal de más de 10 empleados bajo un marco Scrum y he dictado clases, seminarios y certificaciones nacionales e internacionales por más de 10 años, con participantes de Argentina, Chile, Uruguay, Venezuela, República Dominicana, España y más.",
+                    "Estudié Analista de Sistemas de Computación desde 2010, tomé numerosos cursos y certificaciones, realicé numerosos proyectos y experiencias laborales voluntarias y también soy miembro de Mensa, con un CI mayor a 132."
+                ]
+            }, 
+            {
+                "title": "Habilidades",
+                "text": 
+                [
+                    "Desarrollo Front-End: HTML, CSS, JS, React, Bootstrap, jQuery, MaterialUI, etc.",
+                    "Desarrollo Back-End: PHP, JAVA, Node, Express, Mongoose, etc.",
+                    "Bases de datos: MySQL y MongoDB",
+                    "Herramientas/Tecnologías: Jest, Git/Github, Docker, Cloud, etc.",
+                    "Conocimientos en: OOP, TDD, BDD, CI/CD, Scrum, Gherkin, etc."
+                ]
+            },
+            {
+                "title": "Proyectos",
+                "projects": 
+                [
+                    {
+                        "title": "Arte Numerológico",
+                        "text": "Proyecto personal realizado en colaboración con la diseñadora UX/UI Luisina Banega"
+                    },
+                    {
+                        "title": "Academia Rosario Ballet",
+                        "text": "Sitio institucional para Academia Rosario Ballet"
+                    },
+                    {
+                        "title": "Proyectos de Back-End de FCC",
+                        "text": "Proyectos finales de la certificación en Back-End de freeCodeCamp"
+                    },
+                    {
+                        "title": "Proyecto Final de Meta",
+                        "text": "Proyecto final de la Certificación Profesional en Desarrollador de Front-End de Meta"
+                    },
+                    {
+                        "title": "Proyectos de Front-End de FCC",
+                        "text": "Proyectos finales de la certificación en Front-End de freeCodeCamp"
+                    },
+                    {
+                        "title": "Proyectos antiguos",
+                        "text": "Proyectos personales realizados durante 2010-2022"
+                    }
+                ]
+            },
+            {
+                "title": "Información de Contacto"
+            }
+        ]
+    },
+    "english": {
+        "header": ["Minimalist", "Flat", "Microinteractions", "Dark Mode"],
+        "title": "Full-Stack Developer",
+        "sections": 
+        [
+            {
+                "title": "About Me",
+                "text": 
+                [
+                    "I'm a highly collaborative and efficient developer with vast trajectory in development and vast experience in business work environments and leading groups.",
+                    "I'm Founder and CEO of a big ballet school leading more than 10 employees under a Scrum framework and I have been conducting classes, seminars and certifications nationally and internationally for more than 10 years, with participantes from Argentina, Chile, Uruguay, Venezuela, Dominican Republic, Spain and more.",
+                    "I've studied Computer Science since 2010, taken numerous courses and certifications, made numerous projects and volunteer works and I'm also a member of Mensa with over 132 CI."
+                ]
+            }, 
+            {
+                "title": "Skills",
+                "text": 
+                [
+                    "Front-End Development: HTML, CSS and JS, with React, Bootstrap, jQuery, MaterialUI, etc.",
+                    "Back-End Development: PHP, JAVA, Node, Express, Mongoose, etc.",
+                    "Databases: MySQL and MongoDB",
+                    "Tools/Techs: Jest, Git/Github, Docker, Cloud, etc.",
+                    "Knowledge of: OOP, TDD, BDD, CI/CD, Scrum, Gherkin, etc."
+                ]
+            },
+            {
+                "title": "Projects",
+                "projects": 
+                [
+                    {
+                        "title": "Arte Numerológico",
+                        "text": "Personal project made in collaboration with the UX/UI Designer Luisina Banega"
+                    },
+                    {
+                        "title": "Academia Rosario Ballet",
+                        "text": "Institutional site for Academia Rosario Ballet"
+                    },
+                    {
+                        "title": "FCC Back-End Projects",
+                        "text": "Final projects for my freeCodeCamp Back-End certification"
+                    },
+                    {
+                        "title": "Meta Capstone Project",
+                        "text": "Final project for my Meta Front-End Developer Professional Certificate"
+                    },
+                    {
+                        "title": "FCC Front-End Projects",
+                        "text": "Final projects for my freeCodeCamp Front-End certification"
+                    },
+                    {
+                        "title": "Legacy Projects",
+                        "text": "Personal projects made through 2010-2022"
+                    }
+                ]
+            },
+            {
+                "title": "Contact Information"
+            }
+        ]
+    }
+}

@@ -3,8 +3,13 @@
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 0em; /* Adjust the width as desired */
+  background-color: transparent; /* Change the background color as desired */
+}
+
 header {
-  position: absolute;
+  position: fixed;
   top: 25px;
   left: 25%;
   z-index: 0;
@@ -13,6 +18,12 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
   border-radius: 32px;
+  opacity: .33;
+  transition: opacity .4s;
+}
+
+header:hover {
+  opacity: 1;
 }
 
 header ul {
@@ -106,6 +117,21 @@ header ul li:hover {
   margin-bottom: 50px;
 }
 
+.arrowDown {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: draw 1s infinite;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 20;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 summary::-webkit-details-marker {
   color: red;
 }
@@ -188,16 +214,20 @@ summary::-webkit-details-marker {
   body {
     font-size: 0.67rem !important;
   }
+
   header {
     left: 5%;
     width: 90%;
     height: 30px;
     font-size: 0.67rem;
+    opacity: .67;
   }
+
   .switch-container label {
     width: 30px;
     height: 20px;
   }
+
   .switch-container label:after {
     top: 2px;
     left: 2px;
@@ -205,10 +235,22 @@ summary::-webkit-details-marker {
     height: 16px;
     font-size: 8px;
   }
+
   .switch-container input[type="checkbox"]:checked + label:after {
     left: 12px;
   }
+
   .title {
     font-size: 3rem;
+  }
+
+  .projectDetails div {
+    width: 33%;
+  }
+
+  .projectDetails img {
+    width: 128px;
+    height: 72px;
+    background-color: black;
   }
 }
