@@ -7,12 +7,16 @@ body::-webkit-scrollbar {
   width: 0em; /* Adjust the width as desired */
   background-color: transparent; /* Change the background color as desired */
 }
+  
+.whitespace {
+  height: 25vh;
+}
 
 header {
   position: fixed;
   top: 25px;
   left: 25%;
-  z-index: 0;
+  z-index: 10;
   height: 50px;
   width: 50%;
   background-color: rgba(255, 255, 255, 0.2);
@@ -91,159 +95,6 @@ header ul li:hover {
   content: "EN";
 }
 
-.background {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #fc7, #fe9, #fd8);
-}
-
-.whitespace {
-  height: 25vh;
-}
-
-.title {
-  text-align: center;
-  font-size: 5rem;
-  margin: 50px;
-  font-weight: 500;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 50px;
-}
-
-.arrowDown path:first-child {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
-  animation: drawFirst 2s infinite;
-}
-
-.arrowDown path:last-child {
-  stroke-dasharray: 26;
-  stroke-dashoffset: 26;
-  animation: drawSecond 2s ease-in-out infinite;
-}
-
-@keyframes drawFirst {
-  0% {
-    stroke-dashoffset: 24;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes drawSecond {
-  0% {
-    stroke-dashoffset: 26;
-  }
-  50% {
-    stroke-dashoffset: 26;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-summary::before {
-  position: absolute;
-  background-color: rgba(255,255,255,0.33);
-  width: 20px;
-  height: 20px;
-  content: '';
-  translate: -22px 2px;
-  mix-blend-mode: multiply;
-  animation: blink 1s alternate infinite;
-}
-
-@keyframes blink {
-  0% {
-    box-shadow: -2px 2px 2px rgba(255,0,0,1);
-  }
-  100% {
-    box-shadow: -2px 2px 2px rgba(255,0,0,.33);
-  }
-}
-
-.projectDetails {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.projectDetails div {
-  width: 25%;
-}
-
-.projectDetails img {
-  width: 256px;
-  height: 144px;
-  background-color: black;
-}
-
-.contactList {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.contactList li {
-  list-style: none;
-}
-
-.contactList li a {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 10px;
-  border-radius: 50%;
-  padding: 6px;
-  box-sizing: border-box;
-  text-decoration: none;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-  background: linear-gradient(0deg, rgba(221, 221, 221, 0.33), rgba(255, 255, 255, 0.33));
-  transition: all .5s;
-}
-
-.contactList li a:hover {
-  text-decoration: none;
-}
-
-.contactList li a .fab {
-  width: 50%;
-  height: 50%;
-  display: block;
-  background: linear-gradient(0deg, rgba(221, 221, 221, 0.33), rgba(255, 255, 255, 0.33));
-  border-radius: 50%;
-  line-height: calc(60px - 12px);
-  font-size: 24px;
-  color: #fc7;
-  transition: all .5s;
-}
-
-.contactList li:nth-child(1) a:hover .fab {
-  color: #3b5998;
-}
-
-.contactList li:nth-child(2) a:hover .fab {
-  color: #000;
-}
-
-.contactList li:nth-child(3) a:hover .fab {
-  color: #f44;
-}
-
 @media only screen and (max-width: 480px) {
   body {
     font-size: 0.67rem !important;
@@ -272,25 +123,5 @@ summary::before {
 
   .switch-container input[type="checkbox"]:checked + label:after {
     left: 12px;
-  }
-
-  .title {
-    font-size: 3rem;
-  }
-
-  .projectDetails div {
-    width: 33%;
-  }
-
-  .projectDetails img {
-    width: 128px;
-    height: 72px;
-    background-color: black;
-  }
-
-  summary::before {
-    width: 14px;
-    height: 14px;
-    translate: -15px 2px;
   }
 }
