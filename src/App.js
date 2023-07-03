@@ -1,14 +1,22 @@
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Minimalism from './pages/Minimalism.js';
+import FlatDesign from './pages/FlatDesign.js';
 import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Minimalism />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Minimalism />} />
+          <Route exact path="/flatDesign" element={<FlatDesign />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

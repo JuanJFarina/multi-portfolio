@@ -117,27 +117,61 @@ header ul li:hover {
   margin-bottom: 50px;
 }
 
-.arrowDown {
-  stroke-dasharray: 20;
-  stroke-dashoffset: 20;
-  animation: draw 1s infinite;
+.arrowDown path:first-child {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: drawFirst 2s infinite;
 }
 
-@keyframes draw {
+.arrowDown path:last-child {
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  animation: drawSecond 2s ease-in-out infinite;
+}
+
+@keyframes drawFirst {
   0% {
-    stroke-dashoffset: 20;
+    stroke-dashoffset: 24;
   }
   100% {
     stroke-dashoffset: 0;
   }
 }
 
-summary::-webkit-details-marker {
-  color: red;
+@keyframes drawSecond {
+  0% {
+    stroke-dashoffset: 26;
+  }
+  50% {
+    stroke-dashoffset: 26;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+summary::before {
+  position: absolute;
+  background-color: rgba(255,255,255,0.33);
+  width: 20px;
+  height: 20px;
+  content: '';
+  translate: -22px 2px;
+  mix-blend-mode: multiply;
+  animation: blink 1s alternate infinite;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: -2px 2px 2px rgba(255,0,0,1);
+  }
+  100% {
+    box-shadow: -2px 2px 2px rgba(255,0,0,.33);
+  }
 }
 
 .projectDetails {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
@@ -252,5 +286,11 @@ summary::-webkit-details-marker {
     width: 128px;
     height: 72px;
     background-color: black;
+  }
+
+  summary::before {
+    width: 14px;
+    height: 14px;
+    translate: -15px 2px;
   }
 }

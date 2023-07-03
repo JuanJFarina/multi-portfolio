@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { LanguageContext } from '../components/LangContext.js';
-import arrow from '../assets/arrowDown.svg';
 import text from '../text.json';
 
 export default function Minimalism() {
@@ -22,10 +21,10 @@ export default function Minimalism() {
               display:'flex',
               justifyContent: 'center'
               }}>
-              <svg className="arrowDown" width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <polyline data-name="Right" fill="none" id="Right-2" points="7 16.4 12 21.5 17 16.4" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="2.5" y2="19.2"/>
-              </svg>
+            <svg className="arrowDown" width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12 0 L 12 24" stroke="black" fill="none" />
+              <path d="M 6 16 L 12 24 L 18 16" stroke="black" fill="none" />
+            </svg>
             </div>
             <div className="whitespace" />
             <div className="whitespace" />
