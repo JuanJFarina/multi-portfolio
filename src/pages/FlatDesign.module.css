@@ -85,6 +85,30 @@
     padding: 6px;
 }
 
+.contProj {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projHead {
+    translate: 0px -20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color: #214;
+    border-radius: 2px;
+    padding: 6px;
+}
+
+.projImg {
+    max-width: 256px;
+    min-height: 144px;
+    background-color: black;
+}
+
 .contInf {
     grid-column: 3 / span 4;
     grid-row: 1 / span 1;

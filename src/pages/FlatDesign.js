@@ -51,14 +51,33 @@ export default function FlatDesign() {
       <div className="whitespace" />
       <div className="whitespace" />
       <div className={styles.contenedor}>
-        <h2 className={styles.heading}>{text[language]['sections'][2]['title']}</h2>
-        <div className={styles.bg}>
-          <p>{text[language]['sections'][2]['projects'][0]['title']}: {text[language]['sections'][2]['projects'][0]['text']}</p><hr />
-          <p>{text[language]['sections'][2]['projects'][1]['title']}: {text[language]['sections'][2]['projects'][1]['text']}</p><hr />
-          <p>{text[language]['sections'][2]['projects'][2]['title']}: {text[language]['sections'][2]['projects'][2]['text']}</p><hr />
-          <p>{text[language]['sections'][2]['projects'][3]['title']}: {text[language]['sections'][2]['projects'][3]['text']}</p><hr />
-          <p>{text[language]['sections'][2]['projects'][4]['title']}: {text[language]['sections'][2]['projects'][4]['text']}</p><hr />
-          <p>{text[language]['sections'][2]['projects'][5]['title']}: {text[language]['sections'][2]['projects'][5]['text']}</p>
+        <div className={styles.contProj}>
+          <h2 className={styles.projHead}>{text[language]['sections'][2]['title']}</h2>
+        </div>
+        <div className={styles.bg} style={{gridRow: '2 / span 1', marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][0]['title']}</h6>
+          <p>{text[language]['sections'][2]['projects'][0]['text']}</p>
+          <img className={styles.projImg} alt="Inicio de Arte Numerológico" />
+        </div>
+        <div className={styles.bg} style={{gridRow: "3 / span 1", marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][1]['title']}</h6>
+          {text[language]['sections'][2]['projects'][1]['text']}
+        </div>
+        <div className={styles.bg} style={{gridRow: "4 / span 1", marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][2]['title']}</h6>
+          {text[language]['sections'][2]['projects'][2]['text']}
+        </div>
+        <div className={styles.bg} style={{gridRow: "5 / span 1", marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][3]['title']}</h6>
+          {text[language]['sections'][2]['projects'][3]['text']}
+        </div>
+        <div className={styles.bg} style={{gridRow: "6 / span 1", marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][4]['title']}</h6>
+          {text[language]['sections'][2]['projects'][4]['text']}
+        </div>
+        <div className={styles.bg} style={{gridRow: "7 / span 1", marginBottom:'20px'}}>
+          <h6>{text[language]['sections'][2]['projects'][5]['title']}</h6>
+          {text[language]['sections'][2]['projects'][5]['text']}
         </div>
       </div>
       <div className="whitespace" />
