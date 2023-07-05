@@ -1,7 +1,7 @@
 {
   "name": "multi-portfolio",
   "version": "0.1.0",
-  "homepage": "https://juanjfarina.github.io",
+  "homepage": "https://juanjfarina.github.io/multi-portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
