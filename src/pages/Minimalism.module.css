@@ -66,10 +66,10 @@
   
   @keyframes blink {
     0% {
-      box-shadow: -2px 2px 2px rgba(255,0,0,1);
+      box-shadow: -2px 2px 2px rgba(255,192,128,1);
     }
     100% {
-      box-shadow: -2px 2px 2px rgba(255,0,0,.33);
+      box-shadow: -2px 2px 2px rgba(255,192,128,.33);
     }
   }
   

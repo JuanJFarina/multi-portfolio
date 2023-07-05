@@ -104,8 +104,13 @@
 }
 
 .projImg {
-    max-width: 256px;
-    min-height: 144px;
+    position: absolute;
+    right: 10vw;
+    translate: 0 -50px;
+    max-width: 30vw;
+    max-height: 20vh;
+    width: 256px;
+    height: 144px;
     background-color: black;
 }
 
@@ -128,12 +133,40 @@
     padding: 20px;
 }
 
+.icons {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    color: #ccc;
+    cursor: pointer;
+    transition: transform .2s, color .2s;
+}
+
+.icons:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
 @media only screen and (max-width: 480px) {
     .title {
         font-size: 1.5rem;
     }
 
     .subtitle {
+        font-size: 1rem;
+    }
+
+    .heading {
+        font-size: 1rem;
+        translate: 10px -25px;
+        grid-column: 3 / span 4;
+    }
+
+    .projHead {
+        font-size: 1rem;
+    }
+
+    .contInf {
         font-size: 1rem;
     }
 
