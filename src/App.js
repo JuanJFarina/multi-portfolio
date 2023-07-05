@@ -13,6 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Minimalism />} />
+          <Route exact path="/multi-portfolio" element={<Minimalism />} />
           <Route exact path="/flatDesign" element={<FlatDesign />} />
         </Routes>
       </div>
