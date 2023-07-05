@@ -14,7 +14,7 @@ export default function Header() {
     <header>
       <ul>
         <li>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>{text[language]['header'][0]}</Link>
+          <Link to="/multi-portfolio" style={{ textDecoration: 'none', color: 'inherit' }}>{text[language]['header'][0]}</Link>
         </li>
         <li>
           <Link to="/flatDesign" style={{ textDecoration: 'none', color: 'inherit' }}>{text[language]['header'][1]}</Link>
