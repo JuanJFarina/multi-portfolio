@@ -1,0 +1,146 @@
+body {
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #22f, #002);
+    animation: bgAnimation 8s infinite alternate-reverse;
+}
+
+@keyframes bgAnimation {
+    0% {
+        opacity: 1;
+        scale: 3;
+    }
+    100% {
+        opacity: 0.75;
+        transform: rotate(360deg);
+        scale: 3;
+    }
+}
+
+.backRay {
+    background-color: white;
+    border-radius: 16px;
+    position: fixed;
+    filter: blur(16px);
+    animation: bgFx 20s linear forwards;
+}
+
+@keyframes bgFx {
+    0% {
+        opacity: 0;
+        translate: 0 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        translate: 0 -100vh;
+    }
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.name {
+    position: absolute;
+    justify-self: center;
+    text-shadow: -2px 2px 2px #000;
+    animation: name 5s ease-in-out infinite;
+}
+
+.title {
+    position: absolute;
+    justify-self: center;
+    text-shadow: -2px 2px 2px #000;
+    animation: title 5s ease-in-out infinite;
+}
+
+@keyframes name {
+    0% {
+        opacity: 0;
+        scale: 4;
+    }
+
+    10% {
+        opacity: 1;
+        scale: 3;
+    }
+
+    40% {
+        opacity: 1;
+        scale: 3;
+    }
+
+    50% {
+        opacity: 0;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 1;
+    }
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        scale: 4;
+    }
+
+    50% {
+        opacity: 0;
+        scale: 4;
+    }
+
+    60% {
+        opacity: 1;
+        scale: 3;
+    }
+
+    90% {
+        opacity: 1;
+        scale: 3;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 1;
+    }
+}
+
+.arrows {
+    grid-column: 3 / span 8;
+    grid-row: 3 / span 1;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.arrowDown {
+    stroke-width: 2px;
+    filter: drop-shadow(0 -4px 2px #000);
+    animation: bounce .5s ease-in alternate-reverse infinite;
+}
+
+@keyframes bounce {
+    0% {
+        translate: 0 0;
+    }
+    100% {
+        translate: 0 50px;
+    }
+}
