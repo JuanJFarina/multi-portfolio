@@ -19,7 +19,9 @@ export default function Header() {
         <li>
           <Link to="/flatDesign" style={{ textDecoration: 'none', color: 'inherit' }}>{text[language]['header'][1]}</Link>
         </li>
-        <li>{text[language]['header'][2]}</li>
+        <li>
+        <Link to="/microInteractions" style={{ textDecoration: 'none', color: 'inherit' }}>{text[language]['header'][2]}</Link>
+        </li>
         <li>{text[language]['header'][3]}</li>
         <li className="switch-container">
           <input type="checkbox" id="language-switch" onChange={handleLanguageToggle} checked={language === 'english'} />
