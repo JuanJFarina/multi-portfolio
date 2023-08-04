@@ -9,7 +9,7 @@
   .title {
     text-align: center;
     font-size: 5rem;
-    margin: 50px;
+    margin: 20px;
     font-weight: 500;
   }
   
@@ -17,6 +17,12 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .proposition {
+    text-align: center;
+    font-size: 1rem;
     margin-bottom: 50px;
   }
   
@@ -150,7 +156,11 @@
 @media only screen and (max-width: 480px) {
   .title {
     font-size: 3rem;
-    margin: 50px 0;
+    margin: 20px 0;
+  }
+
+  .proposition {
+    font-size: .8rem;
   }
 
   .projectDetails div {

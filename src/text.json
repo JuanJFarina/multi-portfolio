@@ -2,23 +2,24 @@
     "español": {
         "header": ["Minimalista", "Plano", "Microinteracciones", "Oscuro"],
         "title": "Desarrollador Full-Stack",
+        "proposition": "Si necesitas alguien que pueda resolver problemas con soluciones innovadoras, que piense fuera de la caja, que juegue excelentemente bien en equipo o que incluso pueda liderar de manera responsable y profesional, soy el desarrollador adecuado",
         "sections": 
         [
             {
                 "title": "Acerca de Mí",
                 "text": 
                 [
-                    "Soy un desarrollador altamente colaborativo y eficiente con amplia trayectoria en desarrollo y amplia experiencia en entornos de trabajo empresarial y liderando grupos.",
-                    "Soy Fundador y CEO de una gran escuela de ballet liderando un personal de más de 10 empleados bajo un marco Scrum y he dictado clases, seminarios y certificaciones nacionales e internacionales por más de 10 años, con participantes de Argentina, Chile, Uruguay, Venezuela, República Dominicana, España y más.",
-                    "Estudié Analista de Sistemas de Computación desde 2010, tomé numerosos cursos y certificaciones, realicé numerosos proyectos y experiencias laborales voluntarias y también soy miembro de Mensa, con un CI mayor a 132."
+                    "Desde 2023 trabajo como Desarrollador Full-Stack para No Country y para Academia Rosario Ballet, y desde 2010 he desarrollado varias aplicaciones personales además de tomar numerosos cursos, seminarios, laboratorios y certificaciones en muchas tecnologías como React, Node, MongoDB, PHP, MySQL, y Java, entre otras.",
+                    "Tengo 4 años de experiencia como CEO y Fundador de una escuela de ballet de más de 10 empleados y 70 estudiantes, y 11 años como docente dictando incluso seminarios internacionales a personas de más de 6 países distintos, experiencias donde desarrollé enormemente mis capacidades de comunicación, gestión, organización, liderazgo y trabajo en equipo.",
+                    "Cuento también con 2 años de estudio de la carrera Analista de Sistemas de Computación, donde aprendí conceptos de Ciencias de la Computación como algoritmos, diagramas de flujo, pseudocódigo, estructuras de datos, patrones de diseño, hardware, redes, etc."
                 ]
             }, 
             {
                 "title": "Habilidades",
                 "text": 
                 [
-                    "Desarrollo Front-End: HTML, CSS, JS, React, Bootstrap, jQuery, MaterialUI, etc.",
-                    "Desarrollo Back-End: PHP, JAVA, Node, Express, Mongoose, etc.",
+                    "Desarrollo Front-End: React, SASS, Styled-Components, Bootstrap, MaterialUI, jQuery, Ajax, Axios, etc.",
+                    "Desarrollo Back-End: Node, Express, Mongoose, PHP, JAVA, etc.",
                     "Bases de datos: MySQL y MongoDB",
                     "Herramientas/Tecnologías: Jest, Git/Github, Docker, Cloud, etc.",
                     "Conocimientos en: OOP, TDD, BDD, CI/CD, Scrum, Gherkin, etc."
@@ -28,6 +29,10 @@
                 "title": "Proyectos",
                 "projects": 
                 [
+                    {
+                        "title": "FundWave",
+                        "text": "Trabajo grupal realizado para No Country con un equipo de 7 personas, incluyendo UX/UI y QA/Testing"
+                    },
                     {
                         "title": "Arte Numerológico",
                         "text": "Proyecto personal realizado en colaboración con la diseñadora UX/UI Luisina Banega"
@@ -62,23 +67,24 @@
     "english": {
         "header": ["Minimalist", "Flat", "Microinteractions", "Dark Mode"],
         "title": "Full-Stack Developer",
+        "proposition": "If you need someone that is able to solve problems with innovative solutions, that thinks outside the box, that plays excellent in team or that is even able to lead with responsibility and professionalism, I'm your perfect developer",
         "sections": 
         [
             {
                 "title": "About Me",
                 "text": 
                 [
-                    "I'm a highly collaborative and efficient developer with vast trajectory in development and vast experience in business work environments and leading groups.",
-                    "I'm Founder and CEO of a big ballet school leading more than 10 employees under a Scrum framework and I have been conducting classes, seminars and certifications nationally and internationally for more than 10 years, with participants from Argentina, Chile, Uruguay, Venezuela, Dominican Republic, Spain and more.",
-                    "I've studied Computer Science since 2010, taken numerous courses and certifications, made numerous projects and volunteer works and I'm also a member of Mensa with over 132 CI."
+                    "Since 2023 I'm working as Full-Stack Developer for No Country and Academia Rosario Ballet, and since 2010 I've developed many personal applications as well as taken numerous courses, seminars, laboratories and certifications in many technologies like React, Node, MongoDB, PHP, MySQL, and Java, among others.",
+                    "I've 4 years of experience as CEO and Founder of a ballet school with over 10 employees and 70 students, and 11 years of experience as teacher even teaching international seminars for people from over 6 different countries, experiences where I hugely developed my skills in communication, management, organization, leadership and teamwork.",
+                    "I've also studied during 2 years the career of Computer Systems Analyst, where I learned Computer Science concepts like algorithms, flow diagrams, pseudocode, data structures, design patterns, hardware, networks, etc."
                 ]
             }, 
             {
                 "title": "Skills",
                 "text": 
                 [
-                    "Front-End Development: HTML, CSS and JS, with React, Bootstrap, jQuery, MaterialUI, etc.",
-                    "Back-End Development: PHP, JAVA, Node, Express, Mongoose, etc.",
+                    "Front-End Development: React, SASS, Styled-Components, Bootstrap, MaterialUI, jQuery, Ajax, Axios, etc.",
+                    "Back-End Development: Node, Express, Mongoose, PHP, JAVA, etc.",
                     "Databases: MySQL and MongoDB",
                     "Tools/Techs: Jest, Git/Github, Docker, Cloud, etc.",
                     "Knowledge of: OOP, TDD, BDD, CI/CD, Scrum, Gherkin, etc."
@@ -88,6 +94,10 @@
                 "title": "Projects",
                 "projects": 
                 [
+                    {
+                        "title": "FundWave",
+                        "text": "Group work made for No Country with a team of 7 persons, including UX/UI and QA/Testing"
+                    },
                     {
                         "title": "Arte Numerológico",
                         "text": "Personal project made in collaboration with the UX/UI Designer Luisina Banega"

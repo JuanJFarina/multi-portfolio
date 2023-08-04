@@ -39,9 +39,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.arrows {
+.proposition {
     grid-column: 3 / span 8;
     grid-row: 3 / span 1;
+    translate: 0 70px;
+    text-align: center;
+}
+
+.arrows {
+    grid-column: 3 / span 8;
+    grid-row: 4 / span 1;
     height: 200px;
     display: flex;
     justify-content: space-around;

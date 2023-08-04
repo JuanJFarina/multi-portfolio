@@ -18,6 +18,7 @@ export default function Minimalism() {
           <div className="col-10 col-sm-8">
             <h1 className={styles.title}>Juan José Farina</h1>
             <h2 className={styles.subtitle}>{text[language]['title']}</h2>
+            <p className={styles.proposition}>{text[language]['proposition']}</p>
             <div style={{
               display:'flex',
               justifyContent: 'center'
@@ -30,64 +31,41 @@ export default function Minimalism() {
             <div className="whitespace" />
             <div className="whitespace" />
             <h2 className={styles.subtitle}>{text[language]['sections'][0]['title']}</h2>
-            <p>{text[language]['sections'][0]['text'][0]}</p>
-            <p>{text[language]['sections'][0]['text'][1]}</p>
-            <p>{text[language]['sections'][0]['text'][2]}</p>
+            {
+              text[language]['sections'][0]['text'].map(element => {
+                return (
+                  <p>{element}</p>
+                )
+              })
+            }
             <div className="whitespace" />
             <div className="whitespace" />
             <h2 className={styles.subtitle}>{text[language]['sections'][1]['title']}</h2>
             <ul>
-              <li>{text[language]['sections'][1]['text'][0]}</li>
-              <li>{text[language]['sections'][1]['text'][1]}</li>
-              <li>{text[language]['sections'][1]['text'][2]}</li>
-              <li>{text[language]['sections'][1]['text'][3]}</li>
-              <li>{text[language]['sections'][1]['text'][4]}</li>
+              {
+                text[language]['sections'][1]['text'].map(element => {
+                  return (
+                    <li>{element}</li>
+                  )
+                })
+              }
             </ul>
             <div className="whitespace" />
             <div className="whitespace" />
             <h2 className={styles.subtitle}>{text[language]['sections'][2]['title']}</h2>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][0]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][0]['text']}</div>
-                  <img alt="Inicio de Arte Numerológico" />
-                </div>
-            </details>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][1]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][1]['text']}</div>
-                  <img alt="Inicio de Academia Rosario Ballet" />
-                </div>
-            </details>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][2]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][2]['text']}</div>
-                  <img alt="Página de Replit" />
-                </div>
-            </details>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][3]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][3]['text']}</div>
-                  <img alt="Inicio de Little Lemon" />
-                </div>
-            </details>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][4]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][4]['text']}</div>
-                  <img alt="Página de CodePen" />
-                </div>
-            </details>
-            <details>
-              <summary>{text[language]['sections'][2]['projects'][5]['title']}</summary>
-                <div className={styles.projectDetails}>
-                  <div>{text[language]['sections'][2]['projects'][5]['text']}</div>
-                  <img alt="Inicio de mi antiguo portfolio" />
-                </div>
-            </details>
+            {
+              text[language]['sections'][2]['projects'].map(element => {
+                return (
+                  <details>
+                    <summary>{element['title']}</summary>
+                      <div className={styles.projectDetails}>
+                        <div>{element['text']}</div>
+                        <img alt={element['title']} />
+                      </div>
+                  </details>
+                )
+              })
+            }
             <div className="whitespace" />
             <div className="whitespace" />
             <h2 className={styles.subtitle}>{text[language]['sections'][3]['title']}</h2>

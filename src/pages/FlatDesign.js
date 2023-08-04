@@ -17,6 +17,7 @@ export default function FlatDesign() {
           <div className={styles.hero} />
           <h1 className={styles.title}>Juan José Farina</h1>
           <h2 className={styles.subtitle}>{text[language]['title']}</h2>
+          <p className={styles.proposition}>{text[language]['proposition']}</p>
           <div className={styles.arrows}>
             <svg className={styles.arrowDown} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M 12 0 L 12 24" stroke="black" fill="none" />
@@ -34,9 +35,17 @@ export default function FlatDesign() {
       <div className={styles.contenedor}>
         <h2 className={styles.heading}>{text[language]['sections'][0]['title']}</h2>
         <div className={styles.bg}>
-          <p>{text[language]['sections'][0]['text'][0]}</p><hr />
-          <p>{text[language]['sections'][0]['text'][1]}</p><hr />
-          <p>{text[language]['sections'][0]['text'][2]}</p>
+          {
+            text[language]['sections'][0]['text'].map((element, index) => {
+              const isLastText = index === text[language]['sections'][0]['text'].length - 1;
+              return (
+                <>
+                  <p>{element}</p>
+                  {isLastText ? null : <hr />}
+                </>
+              )
+            })
+          }
         </div>
       </div>
       <div className="whitespace" />
@@ -44,11 +53,17 @@ export default function FlatDesign() {
       <div className={styles.contenedor}>
         <h2 className={styles.heading}>{text[language]['sections'][1]['title']}</h2>
         <div className={styles.bg}>
-          <p>{text[language]['sections'][1]['text'][0]}</p><hr />
-          <p>{text[language]['sections'][1]['text'][1]}</p><hr />
-          <p>{text[language]['sections'][1]['text'][2]}</p><hr />
-          <p>{text[language]['sections'][1]['text'][3]}</p><hr />
-          <p>{text[language]['sections'][1]['text'][4]}</p>
+          {
+            text[language]['sections'][1]['text'].map((element, index) => {
+              const isLastText = index === text[language]['sections'][1]['text'].length - 1;
+              return (
+                <>
+                  <p>{element}</p>
+                  {isLastText ? null : <hr />}
+                </>
+              );
+            })
+          }
         </div>
       </div>
       <div className="whitespace" />
@@ -57,36 +72,18 @@ export default function FlatDesign() {
         <div className={styles.contProj}>
           <h2 className={styles.projHead}>{text[language]['sections'][2]['title']}</h2>
         </div>
-        <div className={styles.bg} style={{gridRow: '2 / span 1', marginBottom:'100px'}}>
-          <h6>{text[language]['sections'][2]['projects'][0]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][0]['text']}</div>
-          <img className={styles.projImg} alt="Inicio de Arte Numerológico" />
-        </div>
-        <div className={styles.bg} style={{gridRow: "3 / span 1", marginBottom:'100px'}}>
-          <h6>{text[language]['sections'][2]['projects'][1]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][1]['text']}</div>
-          <img className={styles.projImg} alt="Inicio de Academia Rosario Ballet" />
-        </div>
-        <div className={styles.bg} style={{gridRow: "4 / span 1", marginBottom:'100px'}}>
-          <h6>{text[language]['sections'][2]['projects'][2]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][2]['text']}</div>
-          <img className={styles.projImg} alt="Replit" />
-        </div>
-        <div className={styles.bg} style={{gridRow: "5 / span 1", marginBottom:'100px'}}>
-          <h6>{text[language]['sections'][2]['projects'][3]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][3]['text']}</div>
-          <img className={styles.projImg} alt="Proyecto de Meta" />
-        </div>
-        <div className={styles.bg} style={{gridRow: "6 / span 1", marginBottom:'100px'}}>
-          <h6>{text[language]['sections'][2]['projects'][4]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][4]['text']}</div>
-          <img className={styles.projImg} alt="Codepen" />
-        </div>
-        <div className={styles.bg} style={{gridRow: "7 / span 1"}}>
-          <h6>{text[language]['sections'][2]['projects'][5]['title']}</h6>
-          <div style={{width:'70%'}}>{text[language]['sections'][2]['projects'][5]['text']}</div>
-          <img className={styles.projImg} alt="Proyectos viejos" />
-        </div>
+        {
+          text[language]['sections'][2]['projects'].map((element, index) => {
+            const gridRowValue = `${index + 2} / span 1`;
+            return (
+              <div className={styles.bg} style={{gridRow: gridRowValue, marginBottom:'100px'}}>
+                <h6>{element['title']}</h6>
+                <div style={{width:'70%'}}>{element['text']}</div>
+                <img className={styles.projImg} alt={element['title']} />
+              </div>
+            )
+          })
+        }
       </div>
       <div className="whitespace" />
       <div className="whitespace" />
