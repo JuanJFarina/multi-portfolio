@@ -52,8 +52,8 @@ export default function MicroInteractions() {
             className={styles.arrows}
           >
             <svg className={styles.arrowDown} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 12 0 L 12 24" stroke="black" fill="none" />
-              <path d="M 12 24 L 6 16 M 12 24 L 18 16" stroke="black" fill="none" />
+              <path d="M 12 0 L 12 24" stroke="#eeeeee" fill="none" />
+              <path d="M 12 24 L 6 16 M 12 24 L 18 16" stroke="#eeeeee" fill="none" />
             </svg>
           </motion.div>
         </div>
@@ -72,29 +72,27 @@ export default function MicroInteractions() {
       </ScrollComp>
       <div className="whitespace" />
       <div className="whitespace" />
-      <motion.div 
-        initial="hidden"
-        animate="visible"
+      <ScrollComp
         variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
+          hidden: { opacity: 0, transform: 'scale(0)' },
+          visible: { opacity: 1, transform: 'scale(1)', transition: { duration: 1 } }
         }}
-        transition={{ duration: 1 }}
-        className={styles.contenedor}
       >
-        <h2 className={styles.contInf}>{text[language]['sections'][3]['title']}</h2>
-        <div className={styles.bg} style={{display:'flex', justifyContent:'space-around'}}>
-          <a href="https://linkedin.com/in/juanjosefarina" target="_blank" rel="noopener noreferrer" title="https://linkedin.com/in/juanjosefarina">
-            <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
-          </a>
-          <a href="https://github.com/juanjfarina" target="_blank" rel="noopener noreferrer" title="https://github.com/juanjfarina">
-            <FontAwesomeIcon icon={faGithubSquare} className={styles.icons} />
-          </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juanjosefarina.jjf@gmail.com" target="_blank" rel="noopener noreferrer" title="juanjosefarina.jjf@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} className={styles.icons} />
-          </a>
+        <div className={styles.card}>
+          <h2>{text[language]['sections'][3]['title']}</h2>
+          <div style={{display:'flex', justifyContent:'space-around'}}>
+            <a href="https://linkedin.com/in/juanjosefarina" target="_blank" rel="noopener noreferrer" title="https://linkedin.com/in/juanjosefarina">
+              <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
+            </a>
+            <a href="https://github.com/juanjfarina" target="_blank" rel="noopener noreferrer" title="https://github.com/juanjfarina">
+              <FontAwesomeIcon icon={faGithubSquare} className={styles.icons} />
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juanjosefarina.jjf@gmail.com" target="_blank" rel="noopener noreferrer" title="juanjosefarina.jjf@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} className={styles.icons} />
+            </a>
+          </div>
         </div>
-      </motion.div>
+      </ScrollComp>
       <div className="whitespace" />
       <div className="whitespace" />
     </>

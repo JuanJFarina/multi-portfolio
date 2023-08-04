@@ -26,7 +26,7 @@
     margin-top: 20px;
     font-size: 5rem;
     border-bottom: 1px solid black;
-    font-family: 'Futura';
+    font-family: 'Montserrat';
     letter-spacing: -2px;
 }
 
@@ -36,7 +36,7 @@
     font-size: 2rem;
     text-align: right;
     border-bottom: 1px solid black;
-    font-family: 'Futura';
+    font-family: 'Montserrat';
 }
 
 .proposition {
@@ -91,7 +91,7 @@
     background-color: #214;
     border-radius: 2px;
     padding: 6px;
-    font-family: 'Futura';
+    font-family: 'Montserrat';
 }
 
 .contProj {
@@ -110,7 +110,7 @@
     background-color: #214;
     border-radius: 2px;
     padding: 6px;
-    font-family: 'Futura';
+    font-family: 'Montserrat';
 }
 
 .projImg {
@@ -133,7 +133,7 @@
     background-color: #214;
     border-radius: 2px;
     padding: 6px;
-    font-family: 'Futura';
+    font-family: 'Montserrat';
 }
 
 p {

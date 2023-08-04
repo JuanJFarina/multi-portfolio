@@ -52,7 +52,8 @@ body {
 .name {
     position: absolute;
     justify-self: center;
-    text-shadow: -2px 2px 2px #000;
+    color: #eee;
+    text-shadow: -2px 2px 2px #222;
     animation: name 5s ease-in-out infinite;
     font-family: 'Inter';
 }
@@ -60,7 +61,8 @@ body {
 .title {
     position: absolute;
     justify-self: center;
-    text-shadow: -2px 2px 2px #000;
+    color: #eee;
+    text-shadow: -2px 2px 2px #222;
     animation: title 5s ease-in-out infinite;
     font-family: 'Inter';
 }
@@ -136,7 +138,7 @@ body {
 
 .arrowDown {
     stroke-width: 2px;
-    filter: drop-shadow(0 -4px 2px #000);
+    filter: drop-shadow(0 -4px 2px #222);
     animation: bounce .5s ease-in alternate-reverse infinite;
 }
 
@@ -153,4 +155,51 @@ body {
     text-align: center;
     margin: 0 300px;
     font-family: 'JetBrains Mono';
+    font-weight: 700;
+    color: white;
+}
+
+.card {
+    background-color: rgba(0,0,0,.2);
+    border-radius: 16px;
+    width: 67%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.card h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+}
+
+.icons {
+    width: 64px;
+    height: 64px;
+    margin: 16px 0;
+    filter: brightness(100);
+}
+
+.icons:hover {
+    animation: spinny 1s;
+}
+
+@keyframes spinny {
+    0% {
+        translate: 0 0;
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(400deg);
+    }
+    80% {
+        transform: rotate(340deg);
+    }
+    90% {
+        transform: rotate(375deg);
+    }
+    100% {
+        translate: 0 0;
+        transform: rotate(360deg);
+    }
 }
