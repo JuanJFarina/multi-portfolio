@@ -42,20 +42,8 @@
                         "text": "Sitio institucional para Academia Rosario Ballet"
                     },
                     {
-                        "title": "Proyectos de Back-End de FCC",
-                        "text": "Proyectos finales de la certificación en Back-End de freeCodeCamp"
-                    },
-                    {
                         "title": "Proyecto Final de Meta",
                         "text": "Proyecto final de la Certificación Profesional en Desarrollador de Front-End de Meta"
-                    },
-                    {
-                        "title": "Proyectos de Front-End de FCC",
-                        "text": "Proyectos finales de la certificación en Front-End de freeCodeCamp"
-                    },
-                    {
-                        "title": "Proyectos antiguos",
-                        "text": "Proyectos personales realizados durante 2010-2022"
                     }
                 ]
             },
@@ -107,20 +95,8 @@
                         "text": "Institutional site for Academia Rosario Ballet"
                     },
                     {
-                        "title": "FCC Back-End Projects",
-                        "text": "Final projects for my freeCodeCamp Back-End certification"
-                    },
-                    {
                         "title": "Meta Capstone Project",
                         "text": "Final project for my Meta Front-End Developer Professional Certificate"
-                    },
-                    {
-                        "title": "FCC Front-End Projects",
-                        "text": "Final projects for my freeCodeCamp Front-End certification"
-                    },
-                    {
-                        "title": "Legacy Projects",
-                        "text": "Personal projects made through 2010-2022"
                     }
                 ]
             },

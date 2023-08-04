@@ -5,9 +5,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { LanguageContext } from '../components/LangContext.js';
 import styles from './Minimalism.module.css';
 import text from '../text.json';
+import fundwave from '../assets/Fundwave.png';
+import artenum from '../assets/Artenum.jpg';
+import arb from '../assets/Arb.jpeg';
+import meta from '../assets/Meta.jpeg';
 
 export default function Minimalism() {
   const { language } = useContext(LanguageContext);
+  const images = [fundwave, artenum, arb, meta];
   return (
     <>
       <div className={styles.background} />
@@ -34,7 +39,7 @@ export default function Minimalism() {
             {
               text[language]['sections'][0]['text'].map(element => {
                 return (
-                  <p>{element}</p>
+                  <p className={styles.about}>{element}</p>
                 )
               })
             }
@@ -54,13 +59,13 @@ export default function Minimalism() {
             <div className="whitespace" />
             <h2 className={styles.subtitle}>{text[language]['sections'][2]['title']}</h2>
             {
-              text[language]['sections'][2]['projects'].map(element => {
+              text[language]['sections'][2]['projects'].map((element, index) => {
                 return (
                   <details>
                     <summary>{element['title']}</summary>
                       <div className={styles.projectDetails}>
                         <div>{element['text']}</div>
-                        <img alt={element['title']} />
+                        <img src={images[index]} alt={element['title']} />
                       </div>
                   </details>
                 )

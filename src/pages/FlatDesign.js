@@ -5,9 +5,14 @@ import text from '../text.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import fundwave from '../assets/Fundwave.png';
+import artenum from '../assets/Artenum.jpg';
+import arb from '../assets/Arb.jpeg';
+import meta from '../assets/Meta.jpeg';
 
 export default function FlatDesign() {
   const { language } = useContext(LanguageContext);
+  const images = [fundwave, artenum, arb, meta];
   return (
     <>
       <div className={styles.background} />
@@ -79,7 +84,7 @@ export default function FlatDesign() {
               <div className={styles.bg} style={{gridRow: gridRowValue, marginBottom:'100px'}}>
                 <h6>{element['title']}</h6>
                 <div style={{width:'70%'}}>{element['text']}</div>
-                <img className={styles.projImg} alt={element['title']} />
+                <img className={styles.projImg} src={images[index]} alt={element['title']} />
               </div>
             )
           })

@@ -54,6 +54,7 @@ body {
     justify-self: center;
     text-shadow: -2px 2px 2px #000;
     animation: name 5s ease-in-out infinite;
+    font-family: 'Inter';
 }
 
 .title {
@@ -61,6 +62,7 @@ body {
     justify-self: center;
     text-shadow: -2px 2px 2px #000;
     animation: title 5s ease-in-out infinite;
+    font-family: 'Inter';
 }
 
 @keyframes name {
@@ -150,4 +152,5 @@ body {
 .hero {
     text-align: center;
     margin: 0 300px;
+    font-family: 'JetBrains Mono';
 }
