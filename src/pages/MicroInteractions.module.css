@@ -160,6 +160,82 @@ body {
 }
 
 .card {
+    border-radius: 16px;
+    width: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 1s;
+    display: flex;
+    justify-content: space-around;
+}
+
+.active {
+    animation: activate 1s forwards;
+}
+
+@keyframes activate {
+    0% {
+        background-color: white;
+        width: 0px;
+        max-height: 0px;
+        padding: 16px;
+    }
+    25% {
+        background-color: white;
+        width: 0px;
+        max-height: 0px;
+        padding: 4px;
+    }
+    50% {
+        background-color: white;
+        width: 67%;
+        max-height: 0px;
+        padding: 4px;
+    }
+    100% {
+        background-color: rgba(0,0,0,.2);
+        width: 67%;
+        max-height: 500px;
+        padding: 16px;
+    }
+}
+
+.deactive {
+    animation: deactivate 1s;
+}
+
+@keyframes deactivate {
+    100% {
+        background-color: white;
+        width: 0px;
+        max-height: 0px;
+        padding: 16px;
+    }
+    75% {
+        background-color: white;
+        width: 0px;
+        max-height: 0px;
+        padding: 4px;
+    }
+    50% {
+        background-color: white;
+        width: 67%;
+        max-height: 0px;
+        padding: 4px;
+    }
+    0% {
+        background-color: rgba(0,0,0,.2);
+        width: 67%;
+        max-height: 500px;
+        padding: 16px;
+    }
+}
+
+.contact {
     background-color: rgba(0,0,0,.2);
     border-radius: 16px;
     width: 67%;
@@ -167,7 +243,7 @@ body {
     padding: 16px;
 }
 
-.card h2 {
+.heading {
     text-align: center;
     color: white;
     font-family: 'Inter';

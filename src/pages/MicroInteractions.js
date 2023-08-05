@@ -36,6 +36,18 @@ export default function MicroInteractions() {
     setInter();
   }
 
+  const toggleCard = (e) => {
+    const element = e.currentTarget;
+    if (element.classList.contains(styles.active)) {
+      element.classList.remove(styles.active);
+      element.classList.add(styles.deactive);
+    }
+    else {
+      element.classList.remove(styles.deactive);
+      element.classList.add(styles.active);
+    }
+  };
+
   return (
     <>
       <div className={styles.background} />
@@ -74,23 +86,57 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <ScrollComp
         variants={{
-          hidden: { opacity: 0, transform: 'scale(0)' },
-          visible: { opacity: 1, transform: 'scale(1)', transition: { duration: 1 } }
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-500px 0px' },
+          visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
         }}
       >
-        <div className={styles.card}>
-          <h2>{text[language]['sections'][3]['title']}</h2>
-          <div style={{display:'flex', justifyContent:'space-around'}}>
-            <a href="https://linkedin.com/in/juanjosefarina" target="_blank" rel="noopener noreferrer" title="https://linkedin.com/in/juanjosefarina">
-              <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
-            </a>
-            <a href="https://github.com/juanjfarina" target="_blank" rel="noopener noreferrer" title="https://github.com/juanjfarina">
-              <FontAwesomeIcon icon={faGithubSquare} className={styles.icons} />
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juanjosefarina.jjf@gmail.com" target="_blank" rel="noopener noreferrer" title="juanjosefarina.jjf@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} className={styles.icons} />
-            </a>
-          </div>
+        <h2 className={styles.heading}>{text[language]['sections'][0]['title']}</h2>
+        <div className={styles.card} onClick={toggleCard}>
+        </div>
+      </ScrollComp>
+      <div className="whitespace" />
+      <div className="whitespace" />
+      <ScrollComp
+        variants={{
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '500px 0px' },
+          visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
+        }}
+      >
+        <h2 className={styles.heading}>{text[language]['sections'][1]['title']}</h2>
+        <div className={styles.card} onClick={toggleCard}>
+        </div>
+      </ScrollComp>
+      <div className="whitespace" />
+      <div className="whitespace" />
+      <ScrollComp
+        variants={{
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-500px 0px' },
+          visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
+        }}
+      >
+        <h2 className={styles.heading}>{text[language]['sections'][2]['title']}</h2>
+        <div className={styles.card} onClick={toggleCard}>
+        </div>
+      </ScrollComp>
+      <div className="whitespace" />
+      <div className="whitespace" />
+      <ScrollComp
+        variants={{
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '500px 0px' },
+          visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
+        }}
+      >
+        <h2 className={styles.heading}>{text[language]['sections'][3]['title']}</h2>
+        <div className={styles.card} onClick={toggleCard}>
+          <a href="https://linkedin.com/in/juanjosefarina" target="_blank" rel="noopener noreferrer" title="https://linkedin.com/in/juanjosefarina">
+            <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
+          </a>
+          <a href="https://github.com/juanjfarina" target="_blank" rel="noopener noreferrer" title="https://github.com/juanjfarina">
+            <FontAwesomeIcon icon={faGithubSquare} className={styles.icons} />
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juanjosefarina.jjf@gmail.com" target="_blank" rel="noopener noreferrer" title="juanjosefarina.jjf@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} className={styles.icons} />
+          </a>
         </div>
       </ScrollComp>
       <div className="whitespace" />
