@@ -7,6 +7,10 @@ import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './MicroInteractions.module.css';
 import { motion } from 'framer-motion';
+import fundwave from '../assets/Fundwave.png';
+import artenum from '../assets/Artenum.jpg';
+import arb from '../assets/Arb.jpeg';
+import meta from '../assets/Meta.jpeg';
 
 function rays () {
   if(window.location.pathname === '/microInteractions') {
@@ -30,6 +34,7 @@ function rays () {
 
 export default function MicroInteractions() {
   const { language, isInter, setInter } = useContext(LanguageContext);
+  const images = [fundwave, artenum, arb, meta];
 
   if(!isInter) {
     setInterval(rays, 2000);
@@ -92,6 +97,17 @@ export default function MicroInteractions() {
       >
         <h2 className={styles.heading}>{text[language]['sections'][0]['title']}</h2>
         <div className={styles.card} onClick={toggleCard}>
+          {
+            text[language]['sections'][0]['text'].map((element, index) => {
+              const isLastText = index === text[language]['sections'][0]['text'].length - 1;
+              return (
+                <>
+                  <p>{element}</p>
+                  {isLastText ? null : <hr />}
+                </>
+              )
+            })
+          }
         </div>
       </ScrollComp>
       <div className="whitespace" />
@@ -104,6 +120,17 @@ export default function MicroInteractions() {
       >
         <h2 className={styles.heading}>{text[language]['sections'][1]['title']}</h2>
         <div className={styles.card} onClick={toggleCard}>
+          {
+            text[language]['sections'][1]['text'].map((element, index) => {
+              const isLastText = index === text[language]['sections'][1]['text'].length - 1;
+              return (
+                <>
+                  <p>{element}</p>
+                  {isLastText ? null : <hr />}
+                </>
+              );
+            })
+          }
         </div>
       </ScrollComp>
       <div className="whitespace" />
@@ -116,6 +143,17 @@ export default function MicroInteractions() {
       >
         <h2 className={styles.heading}>{text[language]['sections'][2]['title']}</h2>
         <div className={styles.card} onClick={toggleCard}>
+          {
+            text[language]['sections'][2]['projects'].map((element, index) => {
+              return (
+                <>
+                  <h6>{element['title']}</h6>
+                  <div style={{width:'70%'}}>{element['text']}</div>
+                  <img src={images[index]} alt={element['title']} />
+                </>
+              )
+            })
+          }
         </div>
       </ScrollComp>
       <div className="whitespace" />
@@ -127,7 +165,7 @@ export default function MicroInteractions() {
         }}
       >
         <h2 className={styles.heading}>{text[language]['sections'][3]['title']}</h2>
-        <div className={styles.card} onClick={toggleCard}>
+        <div className={styles.contact} onClick={toggleCard}>
           <a href="https://linkedin.com/in/juanjosefarina" target="_blank" rel="noopener noreferrer" title="https://linkedin.com/in/juanjosefarina">
             <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
           </a>
@@ -136,6 +174,15 @@ export default function MicroInteractions() {
           </a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juanjosefarina.jjf@gmail.com" target="_blank" rel="noopener noreferrer" title="juanjosefarina.jjf@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} className={styles.icons} />
+          </a>
+          <a href={language === 'english' ? 
+              'https://docs.google.com/document/d/15zYYc_d1gcCBmfVd-C04rti5hQeozUA5MVOWW5wIuFg/edit?usp=sharing' : 
+              'https://docs.google.com/document/d/1W3cvFpT9G2dwXy2f-hM9F3jNWCHuNo3N5vVbtPI_h9E/edit?usp=sharing'
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.cv}>CV</div>
           </a>
         </div>
       </ScrollComp>

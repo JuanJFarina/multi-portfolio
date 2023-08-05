@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    width: 100vw;
 }
 
 .background {
@@ -18,7 +19,6 @@ body {
     }
     100% {
         opacity: 0.75;
-        transform: rotate(360deg);
         scale: 3;
     }
 }
@@ -167,10 +167,9 @@ body {
     margin: 0 auto;
     padding: 16px;
     background-color: white;
+    color: white;
     cursor: pointer;
     transition: all 1s;
-    display: flex;
-    justify-content: space-around;
 }
 
 .active {
@@ -192,15 +191,17 @@ body {
     }
     50% {
         background-color: white;
-        width: 67%;
+        width: 67vw;
         max-height: 0px;
         padding: 4px;
+        overflow: hidden;
     }
     100% {
         background-color: rgba(0,0,0,.2);
-        width: 67%;
-        max-height: 500px;
+        width: 67vw;
+        max-height: 1000px;
         padding: 16px;
+        overflow: visible;
     }
 }
 
@@ -223,24 +224,64 @@ body {
     }
     50% {
         background-color: white;
-        width: 67%;
+        width: 67vw;
         max-height: 0px;
         padding: 4px;
     }
     0% {
         background-color: rgba(0,0,0,.2);
-        width: 67%;
+        width: 67vw;
         max-height: 500px;
         padding: 16px;
     }
 }
 
+.card p, .card div, .card h6 {
+    font-family: 'JetBrains Mono';
+}
+
+
+.card img {
+    display: block;
+    z-index: 10;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    opacity: .5;
+    margin: 0 16px 0 auto;
+}
+
+.card img:hover {
+    animation: shine 1s forwards;
+}
+
+@keyframes shine {
+    0% {
+        filter: contrast(100%) brightness(1);
+    }
+    30% {
+        filter: contrast(0) brightness(10);
+        transform: scale(1.5);
+    }
+    100% {
+        filter: contrast(100%) brightness(1);
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
 .contact {
-    background-color: rgba(0,0,0,.2);
     border-radius: 16px;
-    width: 67%;
+    width: 0px;
+    max-height: 0px;
+    overflow: hidden;
     margin: 0 auto;
     padding: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 1s;
+    justify-content: space-around;
+    display: flex;
 }
 
 .heading {
@@ -277,5 +318,49 @@ body {
     100% {
         translate: 0 0;
         transform: rotate(360deg);
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.cv {
+    color: white;
+    font-size: 58px;
+}
+
+.cv:hover {
+    animation: spinny 1s;
+}
+
+@media only screen and (max-width: 480px) {
+    .name {
+        font-size: 8px;
+    }
+
+    .title {
+        font-size: 8px;
+    }
+
+    .hero {
+        margin: 0px;
+        font-size: 2px;
+    }
+
+    .card img {
+        width: 80%;
+        margin: 20px auto;
+        opacity: 1;
+    }
+
+    .icons {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cv {
+        font-size: 30px;
+        margin-top: 5px;
     }
 }

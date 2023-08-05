@@ -150,15 +150,30 @@ p {
 }
 
 .icons {
-    margin-top: 20px;
+    margin-top: 16px;
     width: 50px;
     height: 50px;
     color: #ccc;
     cursor: pointer;
-    transition: transform .2s, color .2s;
+    transition: transform .2s, color .2s, font-weight .2s;
 }
 
 .icons:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cv {
+    color: #ccc;
+    font-size: 55px;
+    transition: all .2s;
+}
+
+.cv:hover {
     transform: scale(1.1);
     color: black;
 }
@@ -195,5 +210,14 @@ p {
         width: 128px;
         height: 72px;
         translate: 0 -25px;
+    }
+
+    .icons {
+        width: 30px;
+    }
+
+    .cv {
+        font-size: 35px;
+        margin-top: 15px;
     }
 }
