@@ -60,7 +60,7 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <div>
         <div className={styles.contenedor}>
-          <h1 className={styles.name}>Juan José Farina</h1>
+          <h1 className={styles.name}>FUNCIONAAAA</h1>
           <h2 className={styles.title}>{text[language]['title']}</h2>
           <motion.div
             initial={{opacity: 0}}
