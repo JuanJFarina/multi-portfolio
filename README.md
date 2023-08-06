@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/JuanJFarina/multi-portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JuanJFarina/multi-portfolio/actions/workflows/pages/pages-build-deployment)
+
 # Minimalism Portfolio:
 ## Layout:
  Keep the layout simple and clean, with ample white space. Use a grid-based structure for consistency.
