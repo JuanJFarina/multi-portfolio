@@ -17,5 +17,9 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install --no-audit --no-fund --no-optional
+      - name: Set up Git
+        run: |
+          git config --global user.email "juanjosefarina.jjf@gmail.com"
+          git config --global user.name "JuanJFarina"
       - name: Build and Deploy
         run: npm run deploy
