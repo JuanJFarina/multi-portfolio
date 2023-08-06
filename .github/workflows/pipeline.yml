@@ -17,9 +17,12 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install --no-audit --no-fund --no-optional
-      - name: Set up Git
-        run: |
-          git config --global user.email "juanjosefarina.jjf@gmail.com"
-          git config --global user.name "JuanJFarina"
       - name: Build and Deploy
-        run: npm run deploy
+        run: npm run build
+      - name: Deploy
+        uses: craz-ymax/ghaction-github-pages@v1
+        with:
+          target-branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
