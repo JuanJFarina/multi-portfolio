@@ -10,15 +10,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Minimalism />} />
-          <Route exact path="/multi-portfolio" element={<Minimalism />} />
-          <Route exact path="/flatDesign" element={<FlatDesign />} />
-          <Route exact path="/microInteractions" element={<MicroInteractions />} />
-        </Routes>
-      </div>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Minimalism />} />
+        <Route exact path="/multi-portfolio" element={<Minimalism />} />
+        <Route exact path="/flatDesign" element={<FlatDesign />} />
+        <Route exact path="/microInteractions" element={<MicroInteractions />} />
+      </Routes>
     </Router>
   );
 }

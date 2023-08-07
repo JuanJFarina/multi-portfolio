@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { LanguageContext } from '../components/LangContext.jsx';
 import ScrollComp from '../components/ScrollComp.jsx';
 import text from '../text.json';
@@ -18,11 +18,11 @@ function rays () {
     let ray = document.createElement('div');
     let wid = Math.random() * 20;
     let heig = wid * 20;
-    let x = Math.random() * 90;
+    let x = Math.random() * 80;
     let y = Math.random() * 50;
     ray.style.width = wid + 'px';
     ray.style.height = heig + 'px';
-    ray.style.left = (x + 5) + 'vw';
+    ray.style.left = (x + 10) + 'vw';
     ray.style.bottom = (y - 20) + 'vh';
     ray.className = styles.backRay;
     background.appendChild(ray);
@@ -36,10 +36,12 @@ export default function MicroInteractions() {
   const { language, isInter, setInter } = useContext(LanguageContext);
   const images = [fundwave, artenum, arb, meta];
 
-  if(!isInter) {
-    setInterval(rays, 2000);
-    setInter();
-  }
+  useEffect(() => {
+    if(!isInter) {
+      setInterval(rays, 2000);
+      setInter(true);
+    }
+  }, [isInter]);
 
   const toggleCard = (e) => {
     const element = e.currentTarget;
@@ -55,25 +57,22 @@ export default function MicroInteractions() {
 
   return (
     <>
-      <div className={styles.background} />
-      <div id='animatedBg' className={styles.animatedBg} />
+      <div id='animatedBg' className={styles.background} />
       <div className="whitespace" />
-      <div>
-        <div className={styles.contenedor}>
-          <h1 className={styles.name}>Juan José Farina</h1>
-          <h2 className={styles.title}>{text[language]['title']}</h2>
-          <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{delay: 0.5, duration: 1}}
-            className={styles.arrows}
-          >
-            <svg className={styles.arrowDown} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 12 0 L 12 24" stroke="#eeeeee" fill="none" />
-              <path d="M 12 24 L 6 16 M 12 24 L 18 16" stroke="#eeeeee" fill="none" />
-            </svg>
-          </motion.div>
-        </div>
+      <div className={styles.contenedor}>
+        <h1 className={styles.name}>Juan José Farina</h1>
+        <h2 className={styles.title}>{text[language]['title']}</h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className={styles.arrows}
+        >
+          <svg className={styles.arrowDown} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12 0 L 12 24" stroke="#eeeeee" fill="none" />
+            <path d="M 12 24 L 6 16 M 12 24 L 18 16" stroke="#eeeeee" fill="none" />
+          </svg>
+        </motion.div>
       </div>
       <div className="whitespace" />
       <div className="whitespace" />
