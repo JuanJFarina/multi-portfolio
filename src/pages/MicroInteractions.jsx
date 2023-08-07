@@ -90,7 +90,7 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <ScrollComp
         variants={{
-          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-500px 0px' },
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-250px 0px' },
           visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
         }}
       >
@@ -113,7 +113,7 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <ScrollComp
         variants={{
-          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '500px 0px' },
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '250px 0px' },
           visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
         }}
       >
@@ -136,7 +136,7 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <ScrollComp
         variants={{
-          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-500px 0px' },
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '-250px 0px' },
           visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
         }}
       >
@@ -159,7 +159,7 @@ export default function MicroInteractions() {
       <div className="whitespace" />
       <ScrollComp
         variants={{
-          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '500px 0px' },
+          hidden: { opacity: 0, transform: 'scale(0.5)', translate: '250px 0px' },
           visible: { opacity: 1, transform: 'scale(1)', translate: '0px 0px', transition: { duration: 1 } }
         }}
       >

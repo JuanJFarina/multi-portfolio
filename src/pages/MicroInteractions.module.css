@@ -44,86 +44,87 @@
 
 .name {
     position: absolute;
-    justify-self: center;
     color: #eee;
     text-shadow: -2px 2px 2px #222;
     animation: name 5s ease-in-out infinite;
     font-family: 'Inter';
+    font-size: 50px;
 }
 
 .title {
     position: absolute;
-    justify-self: center;
     color: #eee;
     text-shadow: -2px 2px 2px #222;
     animation: title 5s ease-in-out infinite;
     font-family: 'Inter';
+    font-size: 50px;
 }
 
 @keyframes name {
     0% {
         opacity: 0;
-        scale: 4;
+        transform: scale(2);
     }
 
     10% {
         opacity: 1;
-        scale: 3;
+        transform: scale(1.5);
     }
 
     40% {
         opacity: 1;
-        scale: 3;
+        transform: scale(1.5);
     }
 
     50% {
         opacity: 0;
-        scale: 1;
+        transform: scale(1);
     }
 
     100% {
         opacity: 0;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
 @keyframes title {
     0% {
         opacity: 0;
-        scale: 4;
+        transform: scale(2);
     }
 
     50% {
         opacity: 0;
-        scale: 4;
+        transform: scale(2);
     }
 
     60% {
         opacity: 1;
-        scale: 3;
+        transform: scale(1.5);
     }
 
     90% {
         opacity: 1;
-        scale: 3;
+        transform: scale(1.5);
     }
 
     100% {
         opacity: 0;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    justify-content: center;
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .arrows {
-    grid-column: 3 / span 8;
-    grid-row: 1 / span 1;
-    translate: 0 50px;
     height: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -137,10 +138,10 @@
 
 @keyframes bounce {
     0% {
-        translate: 0 0;
+        translate: 0 -50px;
     }
     100% {
-        translate: 0 50px;
+        translate: 0 0px;
     }
 }
 
@@ -329,11 +330,11 @@ a {
 
 @media only screen and (max-width: 600px) {
     .name {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .title {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .hero {
