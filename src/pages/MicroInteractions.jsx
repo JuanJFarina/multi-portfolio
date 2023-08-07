@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { LanguageContext } from '../components/LangContext.js';
-import ScrollComp from '../components/ScrollComp.js';
+import { LanguageContext } from '../components/LangContext.jsx';
+import ScrollComp from '../components/ScrollComp.jsx';
 import text from '../text.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';

@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Minimalism from './pages/Minimalism.js';
-import FlatDesign from './pages/FlatDesign.js';
-import MicroInteractions from './pages/MicroInteractions';
-import Header from './components/Header';
+import Minimalism from './pages/Minimalism.jsx';
+import FlatDesign from './pages/FlatDesign.jsx';
+import MicroInteractions from './pages/MicroInteractions.jsx';
+import Header from './components/Header.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import { LanguageProvider } from './components/LangContext.js';
+import { LanguageProvider } from './components/LangContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
