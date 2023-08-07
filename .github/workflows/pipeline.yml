@@ -6,6 +6,13 @@ on:
       - main
 
 jobs:
+  avoid_reduncy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action
+        with:
+          access_token: ${{ github.token }}
   deploy:
     runs-on: ubuntu-latest
     steps:
