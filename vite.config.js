@@ -7,6 +7,6 @@ export default defineConfig(() => {
       outDir: 'build',
     },
     plugins: [react()],
-    base: '/multi-portfolio/'
+    base: '/multi-portfolio'
   };
 });
