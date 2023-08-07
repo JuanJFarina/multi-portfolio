@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function ScrollComp({ children, variants }) {
   const [ref, inView] = useInView({
-    triggerOnce: true // Trigger the animation only once when the element comes into view
+    triggerOnce: false // Trigger the animation always that the element comes into view
   });
 
   return (
