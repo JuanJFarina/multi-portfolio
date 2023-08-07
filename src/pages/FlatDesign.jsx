@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LanguageContext } from '../components/LangContext.js';
+import { LanguageContext } from '../components/LangContext.jsx';
 import styles from './FlatDesign.module.css';
 import text from '../text.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

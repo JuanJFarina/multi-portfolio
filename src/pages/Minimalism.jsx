@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { LanguageContext } from '../components/LangContext.js';
+import { LanguageContext } from '../components/LangContext.jsx';
 import styles from './Minimalism.module.css';
 import text from '../text.json';
 import fundwave from '../assets/Fundwave.png';

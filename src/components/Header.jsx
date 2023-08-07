@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { LanguageContext } from './LangContext.js';
+import { LanguageContext } from './LangContext.jsx';
 import text from '../text.json';
 
 export default function Header() {
