@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { LanguageContext } from '../components/LangContext.jsx';
 import ScrollComp from '../components/ScrollComp.jsx';
+import Write from '../components/Write.jsx';
 import text from '../text.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
@@ -35,6 +36,7 @@ function rays () {
 export default function MicroInteractions() {
   const { language, isInter, setInter } = useContext(LanguageContext);
   const images = [fundwave, artenum, arb, meta];
+  const [about, setAbout] = useState(false);
 
   useEffect(() => {
     if(!isInter) {
@@ -53,6 +55,7 @@ export default function MicroInteractions() {
       element.classList.remove(styles.deactive);
       element.classList.add(styles.active);
     }
+    element.id === 'aboutf' ? setAbout(!about): null;
   };
 
   return (
@@ -95,18 +98,19 @@ export default function MicroInteractions() {
         }}
       >
         <h2 className={styles.heading}>{text[language]['sections'][0]['title']}</h2>
-        <div className={styles.card} onClick={toggleCard}>
-          {
+        <div id='aboutf' className={styles.card} onClick={toggleCard}>
+          {about ? ( <> {
             text[language]['sections'][0]['text'].map((element, index) => {
               const isLastText = index === text[language]['sections'][0]['text'].length - 1;
               return (
                 <>
-                  <p>{element}</p>
+                  <p><Write delay='500' text={element} time='1000'></Write></p>
                   {isLastText ? null : <hr />}
                 </>
               )
             })
           }
+          </>) : ''}
         </div>
       </ScrollComp>
       <div className="whitespace" />
