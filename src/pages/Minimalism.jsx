@@ -92,8 +92,8 @@ export default function Minimalism() {
               </li>
               <li>
                 <a href={language === 'english' ? 
-                    'https://docs.google.com/document/d/15zYYc_d1gcCBmfVd-C04rti5hQeozUA5MVOWW5wIuFg/edit?usp=sharing' : 
-                    'https://docs.google.com/document/d/1W3cvFpT9G2dwXy2f-hM9F3jNWCHuNo3N5vVbtPI_h9E/edit?usp=sharing'
+                    'https://docs.google.com/document/d/15zYYc_d1gcCBmfVd-C04rti5hQeozUA5MVOWW5wIuFg' : 
+                    'https://docs.google.com/document/d/1t0XsHuD0eFICOpTSdF-RpfdonKiLfLnz1B_bdWJqc1s'
                   }
                   target="_blank"
                   rel="noopener noreferrer"
