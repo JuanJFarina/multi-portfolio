@@ -274,8 +274,8 @@
     background-color: white;
     cursor: pointer;
     transition: all 1s;
-    justify-content: space-around;
     display: flex;
+    justify-content: space-around;
 }
 
 .heading {
@@ -330,11 +330,15 @@ a {
 
 @media only screen and (max-width: 600px) {
     .name {
-        font-size: 14px;
+        font-size: 22px;
     }
 
     .title {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .arrowDown {
+        transform: scale(.75);
     }
 
     .hero {
